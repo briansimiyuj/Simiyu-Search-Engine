@@ -14,3 +14,20 @@ $link-color: #1a0dab;
 $link-visited-color: #609;
 $link-outline-color: #000;
 $font-stack: "Roboto", Arial, sans-serif;
+
+
+%flex{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexColumn{
+    @extend %flex;
+    flex-flow: column;
+    justify-content: start;
+}
+
+@mixin flexCenter{
+    @extend %flex;
+    justify-content: center;
+}
