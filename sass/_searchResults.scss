@@ -72,11 +72,32 @@
                 }
             }
 
-            .resultImage{
-                width: 100px;
+            .resultContents{
+                width: 100%;
+                display: flex;
+                @include flexColumn;
+                align-items: start;
 
-                img{
-                    width: 100%;
+                .resultImage{
+                    width: 100px;
+                    margin-right: 0.5rem;
+    
+                    img{
+                        width: 100%;
+                    }
+               }
+
+                .resultText{
+                    flex-grow: 1; 
+                    font-size: 14px;
+                    width: 100%;                   
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    @include mq(768px){
+                        font-size: 1rem;
+                        line-height: 28px;
+                    }
                 }
             }
         }
