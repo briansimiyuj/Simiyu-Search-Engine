@@ -38,7 +38,6 @@
             }
 
             .resultTitle{
-                background: red;
                 width: 100%;
                 font-size: 1rem;
                 line-height: 1.5rem;
@@ -52,6 +51,24 @@
                     font-size: 1.5rem;
                     line-height: 1.75rem;
                     margin-bottom: 0.5rem;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $link-color;
+                    cursor: pointer;
+                }
+
+                a:hover{
+                    text-decoration: underline;
+                }
+
+                a:visited{
+                    color: $link-visited-color;
+                }
+
+                a:focus{
+                    outline: 2px solid link-outline-color;
                 }
             }
         }
