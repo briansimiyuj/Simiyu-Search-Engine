@@ -1,7 +1,6 @@
 .results{
     @include flexColumn;
     padding: 0.5rem 1rem;
-    background: red;
     width: 90vw;    
 
     @include mq(768px){
@@ -22,6 +21,21 @@
 
             @include mq(768px){
                 font-size: 1rem;
+            }
+        }
+    }
+
+    .searchResults{
+        width: 100%;
+
+        .resultItem{
+            background: red;
+            @include flexColumn;
+            width: 100%;
+            padding: 0.25rem 0;
+
+            @include mq(768px){
+                padding: 0.5rem 0;
             }
         }
     }
