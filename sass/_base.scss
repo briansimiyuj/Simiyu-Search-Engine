@@ -54,6 +54,14 @@ html, body{
     font-size: 22px;
 }
 
+.logo{
+    font-size: 1.6rem;
+
+    @include mq(768px){
+        font-size: 2.6rem;
+    }
+}
+
 main{
     @include flexColumn();
     min-height: calc(100vh - 60px);
