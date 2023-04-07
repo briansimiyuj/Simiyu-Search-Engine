@@ -58,3 +58,8 @@ main{
     @include flexColumn();
     min-height: calc(100vh - 60px);
 }
+
+img{
+    display: block;
+    width: 100%;
+}
