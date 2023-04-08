@@ -1,4 +1,6 @@
-import { setSearchFocus } from './searchBar.js';
+import { setSearchFocus } from './searchBar.js'
+
+import { getSearchTerm } from './dataFunction.js'
 
 document.addEventListener("readystatechange", (e) =>{
 
@@ -20,6 +22,18 @@ const submitTheSearch = (e:Event) =>{
 
    e.preventDefault()
 
+   processTheSearch()
+
    setSearchFocus()
+
+}
+
+
+
+const processTheSearch = async () =>{
+
+   const searchTerm = getSearchTerm()
+
+   if(searchTerm === '') return
 
 }

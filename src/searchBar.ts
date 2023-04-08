@@ -5,6 +5,4 @@ export const setSearchFocus = () =>{
 
    search.focus()
 
-   console.log('working')
-
 }
