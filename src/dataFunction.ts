@@ -11,3 +11,10 @@ export const getSearchTerm = () =>{
     return searchTerm
 
 }
+
+
+export const retreiveSearchResults = async(searchTerm: string) =>{
+
+   const wikiSearchString = getWikiSearchString(searchTerm)
+
+}

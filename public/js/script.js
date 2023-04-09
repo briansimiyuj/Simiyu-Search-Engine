@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { setSearchFocus } from './searchBar.js';
-import { getSearchTerm } from './dataFunction.js';
+import { getSearchTerm, retreiveSearchResults } from './dataFunction.js';
 document.addEventListener("readystatechange", (e) => {
     initApp();
 });
@@ -25,4 +25,5 @@ const processTheSearch = () => __awaiter(void 0, void 0, void 0, function* () {
     const searchTerm = getSearchTerm();
     if (searchTerm === '')
         return;
+    const resultArray = yield retreiveSearchResults(searchTerm);
 });
