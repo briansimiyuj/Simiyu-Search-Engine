@@ -17,6 +17,15 @@ export const getSearchTerm = () => {
 export const retreiveSearchResults = (searchTerm) => __awaiter(void 0, void 0, void 0, function* () {
     const wikiSearchString = getWikiSearchString(searchTerm);
     const wikiSearchResults = yield requestData(wikiSearchString);
+    let resultsArray = [];
+    if (wikiSearchResults.hasOwnProperty('query')) {
+        resultsArray = processWikiResults(wikiSearchResults.query.pages);
+        return resultsArray;
+    }
+    else {
+        const statsLine = document.querySelector("#stats");
+        statsLine.textContent = 'Sorry, no results found';
+    }
 });
 const getWikiSearchString = (searchTerm) => {
     const maxChars = getMaxChars();

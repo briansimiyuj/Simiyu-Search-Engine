@@ -19,6 +19,22 @@ export const retreiveSearchResults = async(searchTerm: string) =>{
 
    const wikiSearchResults = await requestData(wikiSearchString)
 
+   let resultsArray: any[] = []
+
+   if(wikiSearchResults.hasOwnProperty('query')){
+
+      resultsArray  = processWikiResults(wikiSearchResults.query.pages)
+
+      return resultsArray
+      
+   }else{
+
+      const statsLine = document.querySelector("#stats") as HTMLDivElement
+
+      statsLine.textContent = 'Sorry, no results found'
+
+   }
+
 }
 
 
