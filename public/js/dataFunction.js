@@ -16,6 +16,7 @@ export const getSearchTerm = () => {
 };
 export const retreiveSearchResults = (searchTerm) => __awaiter(void 0, void 0, void 0, function* () {
     const wikiSearchString = getWikiSearchString(searchTerm);
+    const wikiSearchResults = yield requestData(wikiSearchString);
 });
 const getWikiSearchString = (searchTerm) => {
     const maxChars = getMaxChars();
@@ -34,3 +35,12 @@ const getMaxChars = () => {
         maxChars = 200;
     return maxChars;
 };
+const requestData = (searchString) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const response = yield fetch(searchString);
+        const data = yield response.json();
+    }
+    catch (err) {
+        alert(err);
+    }
+});

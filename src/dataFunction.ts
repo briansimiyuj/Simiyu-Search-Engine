@@ -17,6 +17,8 @@ export const retreiveSearchResults = async(searchTerm: string) =>{
 
    const wikiSearchString = getWikiSearchString(searchTerm)
 
+   const wikiSearchResults = await requestData(wikiSearchString)
+
 }
 
 
@@ -48,3 +50,22 @@ const getMaxChars = () =>{
    return maxChars
 
 } 
+
+
+const requestData = async (searchString: string) =>{
+
+   try {
+      
+      const response = await fetch(searchString)
+
+      const data = await response.json()
+
+      return data
+
+   } catch (err) {
+      
+      alert(err)
+
+   }
+
+}
