@@ -110,7 +110,22 @@ const processWikiResults = (results: Results) =>{
 
          : null
 
-      console.log(title, image, text)
+      
+      const item = {
+
+         id: key,
+
+         title: title,
+
+         text: text,
+
+         image: image,
+
+      }
+
+      resultsArray.push(item)
+
+      console.log(resultsArray)
 
    })
 

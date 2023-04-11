@@ -62,7 +62,14 @@ const processWikiResults = (results) => {
         const image = results[key].hasOwnProperty("thumbnail")
             ? results[key].thumbnail.source
             : null;
-        console.log(title, image, text);
+        const item = {
+            id: key,
+            title: title,
+            text: text,
+            image: image,
+        };
+        resultsArray.push(item);
+        console.log(resultsArray);
     });
     return resultsArray;
 };
