@@ -1,3 +1,10 @@
+type Results = {
+
+   [key: string]: any
+
+}
+ 
+
 export const getSearchTerm = () =>{
 
     const rawSearchTerm = document.querySelector("#search") as HTMLInputElement
@@ -83,5 +90,20 @@ const requestData = async (searchString: string) =>{
       alert(err)
 
    }
+
+}
+
+
+const processWikiResults = (results: Results) =>{
+
+   let resultsArray: any[] = []
+
+   Object.keys(results).forEach((key: string) =>{
+
+      console.log(results)
+
+   })
+
+   return resultsArray
 
 }

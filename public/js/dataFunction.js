@@ -48,8 +48,16 @@ const requestData = (searchString) => __awaiter(void 0, void 0, void 0, function
     try {
         const response = yield fetch(searchString);
         const data = yield response.json();
+        return data;
     }
     catch (err) {
         alert(err);
     }
 });
+const processWikiResults = (results) => {
+    let resultsArray = [];
+    Object.keys(results).forEach((key) => {
+        console.log(results);
+    });
+    return resultsArray;
+};
