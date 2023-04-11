@@ -100,7 +100,17 @@ const processWikiResults = (results: Results) =>{
 
    Object.keys(results).forEach((key: string) =>{
 
-      console.log(results)
+      const title: string = results[key].title
+
+      const text: string = results[key].extract
+
+      const image: string | null = results[key].hasOwnProperty("thumbnail")
+      
+         ? results[key].thumbnail.source
+
+         : null
+
+      console.log(title, image, text)
 
    })
 

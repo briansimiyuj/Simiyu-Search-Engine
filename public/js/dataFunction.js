@@ -57,7 +57,12 @@ const requestData = (searchString) => __awaiter(void 0, void 0, void 0, function
 const processWikiResults = (results) => {
     let resultsArray = [];
     Object.keys(results).forEach((key) => {
-        console.log(results);
+        const title = results[key].title;
+        const text = results[key].extract;
+        const image = results[key].hasOwnProperty("thumbnail")
+            ? results[key].thumbnail.source
+            : null;
+        console.log(title, image, text);
     });
     return resultsArray;
 };
