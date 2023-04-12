@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { setSearchFocus } from './searchBar.js';
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js';
+import { buildSearchResults } from './searchResult.js';
 document.addEventListener("readystatechange", (e) => {
     initApp();
 });

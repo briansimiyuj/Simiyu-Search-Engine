@@ -2,6 +2,8 @@ import { setSearchFocus } from './searchBar.js'
 
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js'
 
+import { buildSearchResults } from './searchResult.js';
+
 document.addEventListener("readystatechange", (e) =>{
 
     initApp()

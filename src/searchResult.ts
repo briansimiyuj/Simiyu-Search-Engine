@@ -9,3 +9,14 @@ type ResultArray ={
     img: string | null
 
 }[]
+
+
+export const buildSearchResults = (resultArray: ResultArray) =>{
+
+   resultArray.forEach(result =>{
+   
+        const resultItem = createResultItem(result)
+   
+   })
+
+}   
