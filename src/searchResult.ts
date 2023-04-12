@@ -41,4 +41,8 @@ const createResultItem = (item: ResultItem) =>{
 
    resultItem.classList.add("resultItem")
 
+   const resultTitle = document.createElement("div")
+
+   resultTitle.classList.add("resultTitle")
+
 }

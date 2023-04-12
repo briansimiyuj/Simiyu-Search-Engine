@@ -6,4 +6,6 @@ export const buildSearchResults = (resultArray) => {
 const createResultItem = (item) => {
     const resultItem = document.createElement("div");
     resultItem.classList.add("resultItem");
+    const resultTitle = document.createElement("div");
+    resultTitle.classList.add("resultTitle");
 };
