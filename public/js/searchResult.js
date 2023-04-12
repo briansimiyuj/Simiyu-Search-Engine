@@ -8,4 +8,8 @@ const createResultItem = (item) => {
     resultItem.classList.add("resultItem");
     const resultTitle = document.createElement("div");
     resultTitle.classList.add("resultTitle");
+    const link = document.createElement("a");
+    link.href = `https://en.wikipedia.org/?curid=${item.id}`;
+    link.textContent = item.title;
+    link.target = '_blank';
 };
