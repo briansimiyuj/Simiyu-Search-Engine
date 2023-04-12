@@ -53,4 +53,8 @@ const createResultItem = (item: ResultItem) =>{
 
    link.target = '_blank'
 
+   resultTitle.append(link)
+
+   resultItem.append(resultTitle)
+
 }

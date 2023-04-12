@@ -12,4 +12,6 @@ const createResultItem = (item) => {
     link.href = `https://en.wikipedia.org/?curid=${item.id}`;
     link.textContent = item.title;
     link.target = '_blank';
+    resultTitle.append(link);
+    resultItem.append(resultTitle);
 };
