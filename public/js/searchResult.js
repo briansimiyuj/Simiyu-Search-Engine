@@ -3,3 +3,7 @@ export const buildSearchResults = (resultArray) => {
         const resultItem = createResultItem(result);
     });
 };
+const createResultItem = (item) => {
+    const resultItem = document.createElement("div");
+    resultItem.classList.add("resultItem");
+};

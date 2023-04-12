@@ -33,3 +33,12 @@ export const buildSearchResults = (resultArray: ResultArray) =>{
    })
 
 }   
+
+
+const createResultItem = (item: ResultItem) =>{
+
+   const resultItem = document.createElement("div")
+
+   resultItem.classList.add("resultItem")
+
+}
