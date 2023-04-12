@@ -57,4 +57,6 @@ const createResultItem = (item: ResultItem) =>{
 
    resultItem.append(resultTitle)
 
+   return resultItem
+
 }

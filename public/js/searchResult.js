@@ -14,4 +14,5 @@ const createResultItem = (item) => {
     link.target = '_blank';
     resultTitle.append(link);
     resultItem.append(resultTitle);
+    return resultItem;
 };
