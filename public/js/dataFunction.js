@@ -69,7 +69,6 @@ const processWikiResults = (results) => {
             image: image,
         };
         resultsArray.push(item);
-        console.log(resultsArray);
     });
     return resultsArray;
 };

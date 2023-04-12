@@ -125,8 +125,6 @@ const processWikiResults = (results: Results) =>{
 
       resultsArray.push(item)
 
-      console.log(resultsArray)
-
    })
 
    return resultsArray

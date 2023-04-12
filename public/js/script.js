@@ -26,4 +26,6 @@ const processTheSearch = () => __awaiter(void 0, void 0, void 0, function* () {
     if (searchTerm === '')
         return;
     const resultArray = yield retreiveSearchResults(searchTerm);
+    if (resultArray)
+        buildSearchResults(resultArray);
 });

@@ -38,4 +38,6 @@ const processTheSearch = async () =>{
 
    const resultArray = await retreiveSearchResults(searchTerm) 
 
+   if(resultArray) buildSearchResults(resultArray)
+
 }
