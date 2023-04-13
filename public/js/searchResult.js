@@ -3,6 +3,7 @@ export const buildSearchResults = (resultArray) => {
         const resultItem = createResultItem(result);
         const resultContents = document.createElement("div");
         resultContents.classList.add("resultContents");
+        const resultImage = createResultImage(result);
     });
 };
 const createResultItem = (item) => {
@@ -17,4 +18,10 @@ const createResultItem = (item) => {
     resultTitle.append(link);
     resultItem.append(resultTitle);
     return resultItem;
+};
+const createResultImage = (result) => {
+    if (result.img) {
+        const resultImage = document.createElement("div");
+        resultImage.classList.add("resultImage");
+    }
 };

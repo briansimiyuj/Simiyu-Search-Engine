@@ -33,6 +33,8 @@ export const buildSearchResults = (resultArray: ResultArray) =>{
         const resultContents = document.createElement("div")
 
         resultContents.classList.add("resultContents")
+
+        const resultImage = createResultImage(result)
    
    })
 
@@ -62,5 +64,18 @@ const createResultItem = (item: ResultItem) =>{
    resultItem.append(resultTitle)
 
    return resultItem
+
+}
+
+
+const createResultImage = (result: ResultItem) =>{
+
+   if (result.img) {
+
+      const resultImage = document.createElement("div")
+
+      resultImage.classList.add("resultImage")  
+
+   }
 
 }
