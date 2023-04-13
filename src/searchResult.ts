@@ -76,6 +76,12 @@ const createResultImage = (result: ResultItem) =>{
 
       resultImage.classList.add("resultImage")  
 
+      const img = document.createElement("img")
+
+      img.src = result.img
+
+      img.alt = result.title
+
    }
 
 }

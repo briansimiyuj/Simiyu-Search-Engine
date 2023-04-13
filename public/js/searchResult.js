@@ -23,5 +23,8 @@ const createResultImage = (result) => {
     if (result.img) {
         const resultImage = document.createElement("div");
         resultImage.classList.add("resultImage");
+        const img = document.createElement("img");
+        img.src = result.img;
+        img.alt = result.title;
     }
 };
