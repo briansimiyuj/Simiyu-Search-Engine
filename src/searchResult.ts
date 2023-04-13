@@ -34,7 +34,17 @@ export const buildSearchResults = (resultArray: ResultArray) =>{
 
         resultContents.classList.add("resultContents")
 
-        const resultImage = createResultImage(result)
+        if(result.img){
+
+         const resultImage = createResultImage(result)
+
+         if(resultImage){
+
+               resultContents.append(resultImage)
+
+         }
+
+        }
    
    })
 
@@ -81,6 +91,10 @@ const createResultImage = (result: ResultItem) =>{
       img.src = result.img
 
       img.alt = result.title
+
+      resultImage.append(img)
+
+      return resultImage
 
    }
 

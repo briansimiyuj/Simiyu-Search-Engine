@@ -3,7 +3,12 @@ export const buildSearchResults = (resultArray) => {
         const resultItem = createResultItem(result);
         const resultContents = document.createElement("div");
         resultContents.classList.add("resultContents");
-        const resultImage = createResultImage(result);
+        if (result.img) {
+            const resultImage = createResultImage(result);
+            if (resultImage) {
+                resultContents.append(resultImage);
+            }
+        }
     });
 };
 const createResultItem = (item) => {
@@ -26,5 +31,7 @@ const createResultImage = (result) => {
         const img = document.createElement("img");
         img.src = result.img;
         img.alt = result.title;
+        resultImage.append(img);
+        return resultImage;
     }
 };
