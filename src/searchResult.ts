@@ -144,3 +144,20 @@ export const setStatsLine = (numberOfResults: number) =>{
    }
 
 }
+
+
+export const deleteSearchResults = () =>{
+
+   const searchResults = document.querySelector("#searchResults") as HTMLDivElement 
+
+   let child = searchResults.lastElementChild
+
+   while(child){
+
+      searchResults.removeChild(child)
+
+      child = searchResults.lastElementChild
+      
+   }
+
+}

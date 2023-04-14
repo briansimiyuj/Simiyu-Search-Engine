@@ -57,3 +57,11 @@ export const setStatsLine = (numberOfResults) => {
         stats.textContent = 'Sorry, no results.';
     }
 };
+export const deleteSearchResults = () => {
+    const searchResults = document.querySelector("#searchResults");
+    let child = searchResults.lastElementChild;
+    while (child) {
+        searchResults.removeChild(child);
+        child = searchResults.lastElementChild;
+    }
+};
