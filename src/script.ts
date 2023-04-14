@@ -21,6 +21,8 @@ const initApp = () =>{
 
    search.addEventListener("input", showClearTextButton)
 
+   setSearchFocus()
+
 }
 
 

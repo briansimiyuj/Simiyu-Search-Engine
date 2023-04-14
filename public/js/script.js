@@ -18,6 +18,7 @@ const initApp = () => {
     form.addEventListener("submit", submitTheSearch);
     const search = document.querySelector("#search");
     search.addEventListener("input", showClearTextButton);
+    setSearchFocus();
 };
 const submitTheSearch = (e) => {
     e.preventDefault();
