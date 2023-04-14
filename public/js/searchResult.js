@@ -39,4 +39,8 @@ const createResultImage = (result) => {
 const createResultText = (result) => {
     const resulText = document.createElement("div");
     resulText.classList.add("resultText");
+    const resultDesc = document.createElement("p");
+    resultDesc.textContent = result.text;
+    resulText.append(resultDesc);
+    return resulText;
 };

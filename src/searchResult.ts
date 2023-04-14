@@ -110,4 +110,12 @@ const createResultText = (result: ResultItem) =>{
 
    resulText.classList.add("resultText")
 
+   const resultDesc = document.createElement("p")
+
+   resultDesc.textContent = result.text
+
+   resulText.append(resultDesc)
+
+   return resulText
+
 }
