@@ -48,6 +48,14 @@ export const buildSearchResults = (resultArray: ResultArray) =>{
 
 
         const resultText = createResultText(result)
+
+        resultContents.append(resultText)
+
+        resultItem.append(resultContents)
+
+        const searchResults = document.querySelector("#searchResults") as HTMLDivElement
+
+        searchResults.append(resultItem)
    
    })
 

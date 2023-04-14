@@ -10,6 +10,10 @@ export const buildSearchResults = (resultArray) => {
             }
         }
         const resultText = createResultText(result);
+        resultContents.append(resultText);
+        resultItem.append(resultContents);
+        const searchResults = document.querySelector("#searchResults");
+        searchResults.append(resultItem);
     });
 };
 const createResultItem = (item) => {
