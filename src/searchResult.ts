@@ -161,3 +161,10 @@ export const deleteSearchResults = () =>{
    }
 
 }
+
+
+export const clearStatsLine = () =>{
+
+   document.querySelector("#stats")!.textContent = ''
+
+}

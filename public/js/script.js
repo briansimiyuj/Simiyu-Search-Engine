@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { setSearchFocus } from './searchBar.js';
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js';
-import { buildSearchResults, setStatsLine, deleteSearchResults } from './searchResult.js';
+import { buildSearchResults, setStatsLine, deleteSearchResults, clearStatsLine } from './searchResult.js';
 document.addEventListener("readystatechange", (e) => {
     initApp();
 });
@@ -24,6 +24,7 @@ const submitTheSearch = (e) => {
     setSearchFocus();
 };
 const processTheSearch = () => __awaiter(void 0, void 0, void 0, function* () {
+    clearStatsLine();
     const searchTerm = getSearchTerm();
     if (searchTerm === '')
         return;

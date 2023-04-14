@@ -65,3 +65,6 @@ export const deleteSearchResults = () => {
         child = searchResults.lastElementChild;
     }
 };
+export const clearStatsLine = () => {
+    document.querySelector("#stats").textContent = '';
+};
