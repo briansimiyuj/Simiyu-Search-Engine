@@ -9,6 +9,7 @@ export const buildSearchResults = (resultArray) => {
                 resultContents.append(resultImage);
             }
         }
+        const resultText = createResultText(result);
     });
 };
 const createResultItem = (item) => {
@@ -34,4 +35,8 @@ const createResultImage = (result) => {
         resultImage.append(img);
         return resultImage;
     }
+};
+const createResultText = (result) => {
+    const resulText = document.createElement("div");
+    resulText.classList.add("resultText");
 };

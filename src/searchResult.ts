@@ -45,6 +45,9 @@ export const buildSearchResults = (resultArray: ResultArray) =>{
          }
 
         }
+
+
+        const resultText = createResultText(result)
    
    })
 
@@ -97,5 +100,14 @@ const createResultImage = (result: ResultItem) =>{
       return resultImage
 
    }
+
+}
+
+
+const createResultText = (result: ResultItem) =>{
+
+   const resulText = document.createElement("div")
+
+   resulText.classList.add("resultText")
 
 }
