@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { setSearchFocus } from './searchBar.js';
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js';
-import { buildSearchResults } from './searchResult.js';
+import { buildSearchResults, setStatsLine } from './searchResult.js';
 document.addEventListener("readystatechange", (e) => {
     initApp();
 });
@@ -29,4 +29,6 @@ const processTheSearch = () => __awaiter(void 0, void 0, void 0, function* () {
     const resultArray = yield retreiveSearchResults(searchTerm);
     if (resultArray)
         buildSearchResults(resultArray);
+    if (resultArray)
+        setStatsLine(resultArray.length);
 });

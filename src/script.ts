@@ -2,7 +2,7 @@ import { setSearchFocus } from './searchBar.js'
 
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js'
 
-import { buildSearchResults } from './searchResult.js';
+import { buildSearchResults, setStatsLine } from './searchResult.js';
 
 document.addEventListener("readystatechange", (e) =>{
 
@@ -41,5 +41,7 @@ const processTheSearch = async () =>{
    const resultArray = await retreiveSearchResults(searchTerm) 
 
    if(resultArray) buildSearchResults(resultArray)
+
+   if(resultArray) setStatsLine(resultArray.length)
 
 }

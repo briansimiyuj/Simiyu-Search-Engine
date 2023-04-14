@@ -127,3 +127,20 @@ const createResultText = (result: ResultItem) =>{
    return resulText
 
 }
+
+
+export const setStatsLine = (numberOfResults: number) =>{
+
+   const stats = document.querySelector("#stats") as HTMLDivElement
+
+   if(numberOfResults){
+
+      stats.textContent = `Displaying ${numberOfResults} results.`
+      
+   }else{
+
+      stats.textContent = 'Sorry, no results.'
+
+   }
+
+}

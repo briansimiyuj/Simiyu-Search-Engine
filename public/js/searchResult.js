@@ -48,3 +48,12 @@ const createResultText = (result) => {
     resulText.append(resultDesc);
     return resulText;
 };
+export const setStatsLine = (numberOfResults) => {
+    const stats = document.querySelector("#stats");
+    if (numberOfResults) {
+        stats.textContent = `Displaying ${numberOfResults} results.`;
+    }
+    else {
+        stats.textContent = 'Sorry, no results.';
+    }
+};
