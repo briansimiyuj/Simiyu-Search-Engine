@@ -2,6 +2,8 @@ const search = document.querySelector("#search") as HTMLInputElement
 
 const clear = document.querySelector("#clear") as HTMLDivElement
 
+const mic = document.querySelector("#mic") as HTMLButtonElement
+
 
 export const setSearchFocus = () =>{
 
@@ -62,5 +64,19 @@ export const escape = (e: KeyboardEvent) =>{
       clear.click()
 
    }
+
+}
+
+
+export const micOn = (e:MouseEvent) =>{
+
+   mic.classList.add("on")
+
+}
+
+
+export const micOff = (e:MouseEvent) =>{
+
+   mic.classList.remove("on")
 
 }

@@ -1,5 +1,6 @@
 const search = document.querySelector("#search");
 const clear = document.querySelector("#clear");
+const mic = document.querySelector("#mic");
 export const setSearchFocus = () => {
     search.focus();
 };
@@ -29,4 +30,10 @@ export const escape = (e) => {
     if (e.key === "Escape") {
         clear.click();
     }
+};
+export const micOn = (e) => {
+    mic.classList.add("on");
+};
+export const micOff = (e) => {
+    mic.classList.remove("on");
 };

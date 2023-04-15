@@ -1,4 +1,4 @@
-import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener, escape } from './searchBar.js'
+import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener, escape, micOn, micOff } from './searchBar.js'
 
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js'
 
@@ -28,6 +28,12 @@ const initApp = () =>{
    search.addEventListener("input", showClearTextButton)
 
    search.addEventListener("keydown", escape)
+
+   const mic = document.querySelector("#mic") as HTMLButtonElement
+
+   mic.addEventListener("mousedown", micOn)
+   
+   mic.addEventListener("mouseup", micOff)
 
    setSearchFocus()
 
