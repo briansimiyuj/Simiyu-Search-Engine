@@ -20,3 +20,8 @@ export const clearSearchText = (e) => {
     clear.classList.remove("flex");
     setSearchFocus();
 };
+export const clearPushListener = (e) => {
+    if (e.key === "Enter" || e.key === "Escape" || e.key === " ") {
+        clear.click();
+    }
+};
