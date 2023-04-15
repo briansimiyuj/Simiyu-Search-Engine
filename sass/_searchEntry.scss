@@ -105,4 +105,12 @@
     #searchBar:hover, #searchBar:focus-within{
         box-shadow: 0 2px 5px 2px $search-bar-border;
     }
+
+    #mic{
+        border-radius: 50%;
+    }
+
+    #mic.on{
+        animation: pulse 2s infinite;
+    }
 }
