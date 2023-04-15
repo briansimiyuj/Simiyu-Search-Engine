@@ -1,3 +1,16 @@
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(67,110,238,.99);
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(67,110,238,.0);        
+    }
+    100%{        
+        box-shadow: 0 0 0 0 rgba(67,110,238,0);
+    } 
+}
+
+
 .searchEntry{
     @include flexColumn;
     padding-top: 40px;
