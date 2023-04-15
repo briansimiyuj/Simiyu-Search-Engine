@@ -1,4 +1,4 @@
-import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener } from './searchBar.js'
+import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener, escape } from './searchBar.js'
 
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js'
 
@@ -26,6 +26,8 @@ const initApp = () =>{
    clear.addEventListener("keydown", clearPushListener)
 
    search.addEventListener("input", showClearTextButton)
+
+   search.addEventListener("keydown", escape)
 
    setSearchFocus()
 

@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener } from './searchBar.js';
+import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener, escape } from './searchBar.js';
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js';
 import { buildSearchResults, setStatsLine, deleteSearchResults, clearStatsLine } from './searchResult.js';
 document.addEventListener("readystatechange", (e) => {
@@ -21,6 +21,7 @@ const initApp = () => {
     clear.addEventListener("click", clearSearchText);
     clear.addEventListener("keydown", clearPushListener);
     search.addEventListener("input", showClearTextButton);
+    search.addEventListener("keydown", escape);
     setSearchFocus();
 };
 const submitTheSearch = (e) => {

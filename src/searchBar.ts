@@ -46,10 +46,21 @@ export const clearSearchText = (e: MouseEvent | KeyboardEvent) =>{
 
 export const clearPushListener = (e: KeyboardEvent) =>{
 
-   if(e.key === "Enter" || e.key === "Escape" || e.key === " "){
+   if(e.key === "Enter" || e.key === " "){
 
       clear.click()
       
+   }
+
+}
+
+
+export const escape = (e: KeyboardEvent) =>{
+   
+   if(e.key === "Escape"){
+
+      clear.click()
+
    }
 
 }

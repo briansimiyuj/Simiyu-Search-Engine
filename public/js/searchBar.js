@@ -21,7 +21,12 @@ export const clearSearchText = (e) => {
     setSearchFocus();
 };
 export const clearPushListener = (e) => {
-    if (e.key === "Enter" || e.key === "Escape" || e.key === " ") {
+    if (e.key === "Enter" || e.key === " ") {
+        clear.click();
+    }
+};
+export const escape = (e) => {
+    if (e.key === "Escape") {
         clear.click();
     }
 };
