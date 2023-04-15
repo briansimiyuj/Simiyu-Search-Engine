@@ -13,3 +13,10 @@ export const showClearTextButton = () => {
         clear.classList.remove("flex");
     }
 };
+export const clearSearchText = (e) => {
+    e.preventDefault();
+    search.value = '';
+    clear.classList.add("none");
+    clear.classList.remove("flex");
+    setSearchFocus();
+};

@@ -1,4 +1,4 @@
-import { setSearchFocus, showClearTextButton } from './searchBar.js'
+import { setSearchFocus, showClearTextButton, clearSearchText } from './searchBar.js'
 
 import { getSearchTerm, retreiveSearchResults } from './dataFunction.js'
 
@@ -18,6 +18,10 @@ const initApp = () =>{
    form.addEventListener("submit", submitTheSearch)
 
    const search = document.querySelector("#search") as HTMLInputElement
+
+   const clear = document.querySelector("#clear") as HTMLDivElement
+
+   clear.addEventListener("click", clearSearchText)
 
    search.addEventListener("input", showClearTextButton)
 

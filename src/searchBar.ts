@@ -27,3 +27,18 @@ export const showClearTextButton = () =>{
   }
 
 }
+
+
+export const clearSearchText = (e: MouseEvent | KeyboardEvent) =>{
+
+   e.preventDefault()
+   
+   search.value = ''
+
+   clear.classList.add("none")
+
+   clear.classList.remove("flex")
+
+   setSearchFocus()
+
+}
