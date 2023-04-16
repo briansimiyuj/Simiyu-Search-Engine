@@ -32,7 +32,7 @@ export const escape = (e) => {
     }
 };
 export const micOn = (e) => {
-    mic.classList.add("on");
+    const recognition = new window.webkitSpeechRecognition;
 };
 export const micOff = (e) => {
     mic.classList.remove("on");

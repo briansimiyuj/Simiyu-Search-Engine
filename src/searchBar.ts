@@ -70,7 +70,7 @@ export const escape = (e: KeyboardEvent) =>{
 
 export const micOn = (e:MouseEvent) =>{
 
-   mic.classList.add("on")
+   const recognition = new (window as any).webkitSpeechRecognition
 
 }
 
