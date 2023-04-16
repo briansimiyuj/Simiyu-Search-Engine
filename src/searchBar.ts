@@ -103,6 +103,10 @@ export const micOn = (e:MouseEvent) =>{
 
       }
 
+   }).catch((error) =>{
+
+      alert('Error while accessing microphone')
+
    })
 
 }

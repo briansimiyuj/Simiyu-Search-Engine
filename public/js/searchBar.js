@@ -43,6 +43,8 @@ export const micOn = (e) => {
             const result = event.results[0][0].transcript;
             console.log(result);
         };
+    }).catch((error) => {
+        alert('Error while accessing microphone');
     });
 };
 export const micOff = (e) => {
