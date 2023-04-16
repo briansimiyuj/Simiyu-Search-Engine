@@ -99,7 +99,7 @@ export const micOn = (e:MouseEvent) =>{
 
          const result = event.results[0][0].transcript
 
-         console.log(result)
+         search.value = result
 
       }
 

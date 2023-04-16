@@ -41,7 +41,7 @@ export const micOn = (e) => {
         recognition.start();
         recognition.onresult = (event) => {
             const result = event.results[0][0].transcript;
-            console.log(result);
+            search.value = result;
         };
     }).catch((error) => {
         alert('Error while accessing microphone');
