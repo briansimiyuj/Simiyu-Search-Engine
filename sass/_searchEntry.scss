@@ -78,23 +78,25 @@
             }
         }
 
-        .clear:hover, .clear:focus{
+        #clear:hover, #clear:focus{
             svg{
                 color: $logo-red;
             }
         }
 
         #searchButton{
+            border-left: thin solid $clear-button-color;
             @include mq(768px){
                 padding-left: 1rem;
             }
         }
 
-        .clear{
-            justify-content: center;
+        #clear{
             align-items: center;
+            justify-content: center;
+            transform: translate(35%, 18%);
             color: $stats-color;
-            border-right: thin solid $clear-button-color;
+            
 
             @include mq(768px){
                 padding: 0 1rem;
