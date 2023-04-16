@@ -1,3 +1,14 @@
+type SpeechRecognitionResult = { 
+
+   results: { 
+   
+      transcript: any 
+
+   }[][]
+
+}
+ 
+
 const search = document.querySelector("#search") as HTMLInputElement
 
 const clear = document.querySelector("#clear") as HTMLDivElement
