@@ -3,6 +3,21 @@ type Results = {
    [key: string]: any
 
 }
+
+
+type SpeechRecognitionResult = { 
+
+   results: { 
+   
+      transcript: any 
+
+   }[][]
+
+}
+
+const mic = document.querySelector("#mic") as HTMLButtonElement
+
+const search = document.querySelector("#search") as HTMLInputElement
  
 
 export const getSearchTerm = () =>{
@@ -128,5 +143,45 @@ const processWikiResults = (results: Results) =>{
    })
 
    return resultsArray
+
+}
+
+
+export const micOn = () =>{
+
+   const recognition = new (window as any).webkitSpeechRecognition
+
+   navigator.mediaDevices.getUserMedia({ audio: true })
+
+   .then(() =>{
+
+      recognition.onstart = () =>{
+
+         mic.classList.add("on")
+
+      }
+
+      recognition.start()
+
+      recognition.onresult = (event: SpeechRecognitionResult) =>{
+
+         const result = event.results[0][0].transcript
+
+         search.value = result
+
+      }
+
+   }).catch((error) =>{
+
+      alert('Error while accessing microphone')
+
+   })
+
+}
+
+
+export const micOff = () =>{
+
+   mic.classList.remove("on")
 
 }

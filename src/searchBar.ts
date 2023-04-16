@@ -1,19 +1,6 @@
-type SpeechRecognitionResult = { 
-
-   results: { 
-   
-      transcript: any 
-
-   }[][]
-
-}
- 
-
 const search = document.querySelector("#search") as HTMLInputElement
 
 const clear = document.querySelector("#clear") as HTMLDivElement
-
-const mic = document.querySelector("#mic") as HTMLButtonElement
 
 
 export const setSearchFocus = () =>{
@@ -75,45 +62,5 @@ export const escape = (e: KeyboardEvent) =>{
       clear.click()
 
    }
-
-}
-
-
-export const micOn = (e:MouseEvent) =>{
-
-   const recognition = new (window as any).webkitSpeechRecognition
-
-   navigator.mediaDevices.getUserMedia({ audio: true })
-
-   .then(() =>{
-
-      recognition.onstart = () =>{
-
-         mic.classList.add("on")
-
-      }
-
-      recognition.start()
-
-      recognition.onresult = (event: SpeechRecognitionResult) =>{
-
-         const result = event.results[0][0].transcript
-
-         search.value = result
-
-      }
-
-   }).catch((error) =>{
-
-      alert('Error while accessing microphone')
-
-   })
-
-}
-
-
-export const micOff = (e:MouseEvent) =>{
-
-   mic.classList.remove("on")
 
 }

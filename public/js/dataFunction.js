@@ -7,6 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const mic = document.querySelector("#mic");
+const search = document.querySelector("#search");
 export const getSearchTerm = () => {
     const rawSearchTerm = document.querySelector("#search");
     const rawSearchTermValue = rawSearchTerm.value.trim();
@@ -71,4 +73,23 @@ const processWikiResults = (results) => {
         resultsArray.push(item);
     });
     return resultsArray;
+};
+export const micOn = () => {
+    const recognition = new window.webkitSpeechRecognition;
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(() => {
+        recognition.onstart = () => {
+            mic.classList.add("on");
+        };
+        recognition.start();
+        recognition.onresult = (event) => {
+            const result = event.results[0][0].transcript;
+            search.value = result;
+        };
+    }).catch((error) => {
+        alert('Error while accessing microphone');
+    });
+};
+export const micOff = () => {
+    mic.classList.remove("on");
 };

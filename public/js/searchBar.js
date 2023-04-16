@@ -1,6 +1,5 @@
 const search = document.querySelector("#search");
 const clear = document.querySelector("#clear");
-const mic = document.querySelector("#mic");
 export const setSearchFocus = () => {
     search.focus();
 };
@@ -30,23 +29,4 @@ export const escape = (e) => {
     if (e.key === "Escape") {
         clear.click();
     }
-};
-export const micOn = (e) => {
-    const recognition = new window.webkitSpeechRecognition;
-    navigator.mediaDevices.getUserMedia({ audio: true })
-        .then(() => {
-        recognition.onstart = () => {
-            mic.classList.add("on");
-        };
-        recognition.start();
-        recognition.onresult = (event) => {
-            const result = event.results[0][0].transcript;
-            search.value = result;
-        };
-    }).catch((error) => {
-        alert('Error while accessing microphone');
-    });
-};
-export const micOff = (e) => {
-    mic.classList.remove("on");
 };

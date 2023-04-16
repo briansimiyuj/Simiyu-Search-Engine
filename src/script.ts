@@ -1,6 +1,6 @@
-import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener, escape, micOn, micOff } from './searchBar.js'
+import { setSearchFocus, showClearTextButton, clearSearchText, clearPushListener, escape } from './searchBar.js'
 
-import { getSearchTerm, retreiveSearchResults } from './dataFunction.js'
+import { getSearchTerm, retreiveSearchResults, micOn, micOff } from './dataFunction.js'
 
 import { buildSearchResults, setStatsLine, deleteSearchResults, clearStatsLine } from './searchResult.js';
 
