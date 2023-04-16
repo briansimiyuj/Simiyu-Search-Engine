@@ -72,6 +72,20 @@ export const micOn = (e:MouseEvent) =>{
 
    const recognition = new (window as any).webkitSpeechRecognition
 
+   navigator.mediaDevices.getUserMedia({ audio: true })
+
+   .then(() =>{
+
+      recognition.onstart = () =>{
+
+         mic.classList.add("on")
+
+      }
+
+      recognition.start()
+
+   })
+
 }
 
 

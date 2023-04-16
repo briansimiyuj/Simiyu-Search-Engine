@@ -33,6 +33,13 @@ export const escape = (e) => {
 };
 export const micOn = (e) => {
     const recognition = new window.webkitSpeechRecognition;
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(() => {
+        recognition.onstart = () => {
+            mic.classList.add("on");
+        };
+        recognition.start();
+    });
 };
 export const micOff = (e) => {
     mic.classList.remove("on");
