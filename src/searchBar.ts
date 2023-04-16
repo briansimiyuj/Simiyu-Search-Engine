@@ -95,6 +95,14 @@ export const micOn = (e:MouseEvent) =>{
 
       recognition.start()
 
+      recognition.onresult = (event: SpeechRecognitionResult) =>{
+
+         const result = event.results[0][0].transcript
+
+         console.log(result)
+
+      }
+
    })
 
 }

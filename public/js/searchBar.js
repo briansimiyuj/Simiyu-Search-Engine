@@ -39,6 +39,10 @@ export const micOn = (e) => {
             mic.classList.add("on");
         };
         recognition.start();
+        recognition.onresult = (event) => {
+            const result = event.results[0][0].transcript;
+            console.log(result);
+        };
     });
 };
 export const micOff = (e) => {
